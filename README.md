@@ -1,33 +1,48 @@
-Super Mario Bros Level 1
-=============
+# Super Mario Bros Level 1 — PPO RL Agent
 
-An attempt to recreate the first level of Super Mario Bros.
+An AI-powered extension of the classic Super Mario Bros Level 1 recreation, featuring a PPO (Proximal Policy Optimization) reinforcement learning agent trained to play the game autonomously.
 
 ![screenshot](https://raw.github.com/justinmeister/Mario-Level-1/master/screenshot.png)
 
-CONTROLS: 
+## 🎮 Original Project
 
-Arrow keys for direction
+This project is built on top of the excellent **Mario-Level-1** game recreation originally created by [**@caglar28**](https://github.com/caglar28). The original project faithfully recreates the first level of Super Mario Bros using Pygame, providing a solid foundation for RL experimentation.
 
-'a' for jump
+**Original repository:** [caglar28/Mario-Level-1](https://github.com/caglar28/Mario-Level-1)
 
-'s' for action (fireball, run)
+## 👥 Credits & Acknowledgments
 
+| Contributor | Role |
+|---|---|
+| [**@caglar28**](https://github.com/caglar28) | 🎮 **Original creator** — designed and built the Mario Level 1 game recreation, game engine, physics, level design, and sprite system |
+| [**@Nikabanzai**](https://github.com/Nikabanzai) | 🤖 **RL extension** — added PPO training pipeline, custom Gymnasium environment wrapper, and AI agent |
 
-DEPENDENCIES:
+> Without @caglar28's carefully crafted game implementation, this RL project would not be possible. Full credit for the game itself belongs to them.
 
-Pygame 1.9.1 (Python 2)
+## 🤖 RL Agent
 
-Pygame 1.9.2 (Python 3) - a little trickier to get going.
+This fork adds:
+- **Custom Gymnasium environment** (`mario_env.py`) wrapping the original game
+- **PPO training pipeline** (`train.py`) using stable-baselines3
+- **Pre-trained model** (`mario_ppo.zip`) that plays Level 1
+- **Tensorboard logging** for training visualization
 
-To install dependencies for Python 2.x:
+## Controls (Manual Play)
 
-	pip install -r requirements.txt
+- Arrow keys — direction
+- `a` — jump
+- `s` — action (fireball, run)
 
-VIDEO DEMO:
+## Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Video Demo
 
 http://www.youtube.com/watch?v=HBbzYKMfx5Y
-   
-DISCLAIMER:
+
+## Disclaimer
 
 This project is intended for non-commercial educational purposes.
